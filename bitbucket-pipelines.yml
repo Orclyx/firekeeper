@@ -1,0 +1,13 @@
+pipelines:
+  branches:
+    master:
+      - step:
+          image: node:14
+          script:
+            - yarn install --check-cache
+            - yarn deploy
+          condition:
+            changesets:
+              includePaths:
+                - "firewalls/*.yml"
+                - "firewalls/*.yaml"

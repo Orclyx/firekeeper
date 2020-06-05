@@ -1,0 +1,6 @@
+.DS_Store
+.env
+.yarn/*
+!.yarn/cache
+!.yarn/releases
+!.yarn/plugins

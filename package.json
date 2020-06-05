@@ -1,0 +1,26 @@
+{
+  "name": "firekeeper",
+  "version": "1.0.0",
+  "description": "Git-based management of DigitalOcean Cloud Firewalls.",
+  "homepage": "https://github.com/Orclyx/firekeeper",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Orclyx/firekeeper.git"
+  },
+  "devDependencies": {
+    "prettier": "2.0.5"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "node-fetch": "^2.6.0",
+    "yaml": "^1.10.0"
+  },
+  "prettier": {
+    "printWidth": 120,
+    "semi": false
+  },
+  "scripts": {
+    "deploy": "yarn node src/Firekeeper.js"
+  }
+}

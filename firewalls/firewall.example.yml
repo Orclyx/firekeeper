@@ -1,0 +1,60 @@
+---
+# Firewall name, which will be appended with a short commit hash. e.g. `[name].41b9a5e`
+# If you change this after first use, the firewall by the previous name will remain in place
+name: example
+
+# Get a droplet's ID from the url when viewing it on DigitalOcean, or use `doctl compute droplet list`
+droplet_ids:
+  - 11111
+  - 22222
+  - 33333
+
+# Alternatively, apply this firewall to tagged droplets rather than individual ones. You can use
+# droplet_ids, tags, both, or neither (for testing)
+tags:
+  - webserver
+
+inbound_rules:
+  # SSH from anywhere
+  - protocol: tcp
+    ports: 22
+    sources:
+      addresses:
+        - 0.0.0.0/0
+        - "::/0"
+      tags:
+        - gateway
+
+  - protocol: tcp
+    ports: 3306
+    sources:
+      addresses:
+        # Bob from Accounting
+        - 192.168.1.123/32
+      droplet_ids:
+        - 44444
+      load_balancer_uids:
+        - 55555
+
+# DigitalOcean defaults.
+outbound_rules:
+  - protocol: icmp
+    # `destinations` can contain all of the same keys as `sources` above
+    destinations:
+      addresses:
+        - 0.0.0.0/0
+        - "::/0"
+
+  - protocol: tcp
+    ports: all
+    destinations:
+      addresses:
+        - 0.0.0.0/0
+        - "::/0"
+
+  - protocol: udp
+    ports: all
+    destinations:
+      addresses:
+        - 0.0.0.0/0
+        - "::/0"
