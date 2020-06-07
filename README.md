@@ -8,7 +8,7 @@ Add or edit YAML files in the `firewalls` directory to represent your desired fi
 
 # One-time setup
 
-- Clone this repository.
+- Clone this repository, or click "Use this template" on GitHub to copy it. Your new repository should be private.
 - Copy and rename `firewall.example.yml` within the `firewalls` directory, give it a descriptive filename and configure to suit your needs. You can add additional configuration files, one for each firewall.
 - Create a [personal access token](https://www.digitalocean.com/docs/apis-clis/api/create-personal-access-token/) for DigitalOcean. What to do with this depends on your pipeline:
 
