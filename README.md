@@ -1,6 +1,6 @@
 # Firekeeper
 
-Git-based management of DigitalOcean Cloud Firewalls.
+Git-based management of DigitalOcean Cloud Firewalls. [View on GitHub](https://github.com/Orclyx/firekeeper)
 
 # Usage
 
