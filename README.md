@@ -12,7 +12,7 @@ Add or edit YAML files in the `firewalls` directory to represent your desired fi
 - Copy and rename `firewall.example.yml` within the `firewalls` directory, give it a descriptive filename and configure to suit your needs. You can add additional configuration files, one for each firewall.
 - Create a [personal access token](https://www.digitalocean.com/docs/apis-clis/api/create-personal-access-token/) for DigitalOcean. What to do with this depends on your pipeline:
 
-## BitBucket
+## Bitbucket
 
 - Add your DigitalOcean personal access token as a secured repository variable named `DIGITALOCEAN_ACCESS_TOKEN` at _Repository Settings → Pipelines → Repository variables_.
 - Enable Pipelines for this repository within _Repository Settings → Pipelines → Settings_.
