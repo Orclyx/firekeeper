@@ -4,7 +4,6 @@ pipelines:
       - step:
           image: node:14
           script:
-            - yarn install --check-cache
             - yarn deploy
           condition:
             changesets:

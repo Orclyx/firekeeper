@@ -1,6 +1,12 @@
 .DS_Store
 .env
-.yarn/*
-!.yarn/cache
+.yarn/**/*.*
+.yarn/unplugged
 !.yarn/releases
 !.yarn/plugins
+/coverage
+
+# Production dependencies
+!.yarn/cache/dotenv-npm-
+!.yarn/cache/node-fetch-npm-
+!.yarn/cache/yaml-npm-
