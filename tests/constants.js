@@ -1,0 +1,8 @@
+module.exports.failureStates = {
+  GET_FIREWALLS_ERR: 1,
+  GET_FIREWALLS_NOT_OK: 2,
+  POST_FIREWALLS_ERR: 4,
+  POST_FIREWALLS_NOT_OK: 8,
+  POST_TAGS_ERR: 16,
+  POST_TAGS_NOT_OK: 24,
+}

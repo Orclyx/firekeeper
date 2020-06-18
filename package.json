@@ -22,6 +22,7 @@
     "semi": false
   },
   "scripts": {
-    "deploy": "yarn node src/Firekeeper.js"
+    "deploy": "yarn node src/Firekeeper.js",
+    "test": "jest --runInBand"
   }
 }

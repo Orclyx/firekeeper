@@ -104,11 +104,15 @@ class Worker {
         Authorization: `Bearer ${this.accessToken}`,
         "Content-Type": "application/json",
       },
-    }).then(async (response) => {
-      if (!response.ok) {
-        throw this.errorFactory(await response.text())
-      }
     })
+      .then(async (response) => {
+        if (!response.ok) {
+          throw this.errorFactory(await response.text())
+        }
+      })
+      .catch((err) => {
+        throw this.errorFactory(err)
+      })
   }
 
   run = async () => {
