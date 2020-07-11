@@ -1,5 +1,7 @@
 # Firekeeper
 
+![Test status](https://github.com/Orclyx/firekeeper/workflows/tests/badge.svg)
+
 Git-based management of DigitalOcean Cloud Firewalls. [View on GitHub](https://github.com/Orclyx/firekeeper)
 
 # Usage
@@ -9,16 +11,17 @@ Add or edit YAML files in the `firewalls` directory to represent your desired fi
 # One-time setup
 
 - Clone this repository, or click "Use this template" on GitHub to copy it. Your new repository should be private.
-- Copy and rename `firewall.example.yml` within the `firewalls` directory, give it a descriptive filename and configure to suit your needs. You can add additional configuration files, one for each firewall.
+- Delete `.github/workflows/test.yml`
+- Copy `firewalls/firewall.example.yml`, give the new file a descriptive name and configure it to suit your needs. You can add additional configuration files, one for each firewall, within the `firewalls` directory.
 - Create a [personal access token](https://www.digitalocean.com/docs/apis-clis/api/create-personal-access-token/) for DigitalOcean. What to do with this depends on your pipeline:
 
-## Bitbucket
+## Bitbucket Pipelines
 
 - Add your DigitalOcean personal access token as a secured repository variable named `DIGITALOCEAN_ACCESS_TOKEN` at _Repository Settings → Pipelines → Repository variables_.
 - Enable Pipelines for this repository within _Repository Settings → Pipelines → Settings_.
 - Push committed configuration to the `master` branch.
 
-## GitHub
+## GitHub Actions
 
 - Add your DigitalOcean personal access token as a secret named `DIGITALOCEAN_ACCESS_TOKEN` at _Settings → Secrets_.
 - Select "Enable local and third party Actions for this repository" in _Settings → Actions_.
