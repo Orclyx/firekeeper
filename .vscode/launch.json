@@ -8,8 +8,8 @@
       "type": "node",
       "request": "launch",
       "name": "Launch Program",
-      "runtimeExecutable": "yarn",
-      "runtimeArgs": ["node", "--nolazy", "--inspect-brk=5858", "src/Firekeeper.js"],
+      "runtimeExecutable": "bun",
+      "runtimeArgs": ["src/Firekeeper.js"],
       "port": 5858
     }
   ]

@@ -29,13 +29,7 @@ Add or edit YAML files in the `firewalls` directory to represent your desired fi
 
 ## Other CI/CD pipeline
 
-In your environment:
-
-- Make your DigitalOcean personal access token available as an environment variable named `DIGITALOCEAN_ACCESS_TOKEN` or add it to a file named `.env` in the deployed directory.
-- Install or make available: Node >= 14.x and Yarn.
-- Run `yarn deploy`.
-
-See `.github/workflows/deploy.yml` and `bitbucket-pipelines.yml` for examples.
+Make your DigitalOcean personal access token available as an environment variable named `DIGITALOCEAN_ACCESS_TOKEN` or add it to a file named `.env` in the deployed directory. See `.github/workflows/deploy.yml` and `bitbucket-pipelines.yml` for examples of how to install and run the worker.
 
 # Help
 

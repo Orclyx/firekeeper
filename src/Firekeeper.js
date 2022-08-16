@@ -3,9 +3,6 @@ const path = require("path")
 const YAML = require("yaml")
 const { Worker } = require("./Worker")
 
-// Load environment variables from .env for ease of use
-require("dotenv").config()
-
 const accessToken = process.env.DIGITALOCEAN_ACCESS_TOKEN
 
 if (typeof accessToken === "undefined") {

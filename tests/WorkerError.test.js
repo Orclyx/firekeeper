@@ -1,7 +1,12 @@
+import { it, expect } from "bun:test"
 const { WorkerError } = require("../src/WorkerError")
 
 it("is an error", () => {
-  expect(new WorkerError()).toBeInstanceOf(Error)
+  try {
+    expect(new WorkerError()).toBeInstanceOf(Error)
+  } catch {
+    expect(new WorkerError() instanceof Error).toBe(true)
+  }
 })
 
 it("extends Error predictably", () => {

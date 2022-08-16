@@ -7,9 +7,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 14.x
-      - run: yarn install --check-cache
-      - run: yarn test
+      - uses: actions/checkout@v3
+      - run: curl -fsSL https://bun.sh/install | bash
+      - run: ~/.bun/bin/bun install
+      - run: ~/.bun/bin/bun wiptest

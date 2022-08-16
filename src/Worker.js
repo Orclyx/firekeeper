@@ -1,5 +1,4 @@
 const { execSync } = require("child_process")
-const fetch = require("node-fetch")
 const { WorkerError } = require("./WorkerError")
 
 /**

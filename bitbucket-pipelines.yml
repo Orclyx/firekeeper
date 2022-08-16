@@ -2,11 +2,8 @@ pipelines:
   branches:
     master:
       - step:
-          image: node:14
+          image: ubuntu:latest
           script:
-            - yarn deploy
-          condition:
-            changesets:
-              includePaths:
-                - "firewalls/*.yml"
-                - "firewalls/*.yaml"
+            - curl -fsSL https://bun.sh/install | bash
+            - ~/.bun/bin/bun install
+            - ~/.bun/bin/bun src/Firekeeper.js
