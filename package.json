@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "dotenv": "^8.2.0",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.7",
     "yaml": "^1.10.0"
   },
   "prettier": {
